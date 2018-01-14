@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/kite.iml" filepath="$PROJECT_DIR$/kite.iml" />
+      <module fileurl="file://$PROJECT_DIR$/kite-dao/kite-dao.iml" filepath="$PROJECT_DIR$/kite-dao/kite-dao.iml" />
+      <module fileurl="file://$PROJECT_DIR$/kite-model/kite-model.iml" filepath="$PROJECT_DIR$/kite-model/kite-model.iml" />
+      <module fileurl="file://$PROJECT_DIR$/kite-remote/kite-remote.iml" filepath="$PROJECT_DIR$/kite-remote/kite-remote.iml" />
+      <module fileurl="file://$PROJECT_DIR$/kite-repo/kite-repo.iml" filepath="$PROJECT_DIR$/kite-repo/kite-repo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/kite-service/kite-service.iml" filepath="$PROJECT_DIR$/kite-service/kite-service.iml" />
+      <module fileurl="file://$PROJECT_DIR$/kite-web/kite-web.iml" filepath="$PROJECT_DIR$/kite-web/kite-web.iml" />
+    </modules>
+  </component>
+</project>
