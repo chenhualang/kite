@@ -14,14 +14,14 @@
         <module name="kite-web" />
       </profile>
     </annotationProcessing>
-    <bytecodeTargetLevel>
-      <module name="kite" target="1.8" />
-      <module name="kite-dao" target="1.8" />
-      <module name="kite-model" target="1.8" />
-      <module name="kite-remote" target="1.8" />
-      <module name="kite-repo" target="1.8" />
-      <module name="kite-service" target="1.8" />
-      <module name="kite-web" target="1.8" />
+    <bytecodeTargetLevel target="1.7">
+      <module name="kite" target="1.7" />
+      <module name="kite-dao" target="1.7" />
+      <module name="kite-model" target="1.7" />
+      <module name="kite-remote" target="1.7" />
+      <module name="kite-repo" target="1.7" />
+      <module name="kite-service" target="1.7" />
+      <module name="kite-web" target="1.7" />
     </bytecodeTargetLevel>
   </component>
 </project>
