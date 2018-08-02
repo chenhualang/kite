@@ -6,146 +6,7 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="688f92b4-ce55-4cfa-8fc2-f47e44d296d2" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/kite-dao/kite-dao.iml" beforeDir="false" afterPath="$PROJECT_DIR$/kite-dao/kite-dao.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/kite-dao/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/kite-dao/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/kite-dao/src/main/java/com/zhong/kite/mapper/UserDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/kite-dao/src/main/java/com/zhong/kite/mapper/UserDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/kite-dao/src/main/java/com/zhong/kite/model/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/kite-dao/src/main/java/com/zhong/kite/model/UserDTO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/kite-dao/src/main/resources/mapping/UserMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/kite-dao/src/main/resources/mapping/UserMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/kite-dao/src/main/resources/mybatis-generator/generatorConfig.xml" beforeDir="false" afterPath="$PROJECT_DIR$/kite-dao/src/main/resources/mybatis-generator/generatorConfig.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/kite-dao/src/test/java/com/kite/zhong/BaseTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/kite-dao/src/test/java/com/kite/zhong/BaseTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/kite-dao/src/test/java/com/kite/zhong/dao/UserTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/kite-dao/src/test/java/com/kite/zhong/dao/UserTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/kite-dao/target/classes/com/zhong/kite/mapper/UserDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/kite-dao/target/classes/com/zhong/kite/mapper/UserDAO.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/kite-dao/target/classes/com/zhong/kite/model/User.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/kite-dao/target/classes/mapping/UserMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/kite-dao/target/classes/mapping/UserMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/kite-dao/target/classes/mybatis-generator/generatorConfig.xml" beforeDir="false" afterPath="$PROJECT_DIR$/kite-dao/target/classes/mybatis-generator/generatorConfig.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/kite-dao/target/kite-dao-1.0-SNAPSHOT-sources.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/kite-dao/target/kite-dao-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/kite-dao/target/kite-dao-1.0-SNAPSHOT.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/kite-dao/target/maven-archiver/pom.properties" beforeDir="false" afterPath="$PROJECT_DIR$/kite-dao/target/maven-archiver/pom.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/kite-dao/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/kite-dao/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/kite-dao/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/kite-dao/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/kite-dao/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/kite-dao/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/kite-dao/target/surefire-reports/BaseTest.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/kite-dao/target/surefire-reports/TEST-BaseTest.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/kite-dao/target/surefire-reports/TEST-com.kite.zhong.BaseTest.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/kite-dao/target/surefire-reports/TEST-com.kite.zhong.dao.UserTest.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/kite-dao/target/surefire-reports/TEST-dao.UserTest.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/kite-dao/target/surefire-reports/com.kite.zhong.BaseTest.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/kite-dao/target/surefire-reports/com.kite.zhong.dao.UserTest.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/kite-dao/target/surefire-reports/dao.UserTest.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/kite-dao/target/test-classes/com/kite/zhong/BaseTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/kite-dao/target/test-classes/com/kite/zhong/BaseTest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/kite-dao/target/test-classes/com/kite/zhong/dao/UserTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/kite-dao/target/test-classes/com/kite/zhong/dao/UserTest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/kite-model/kite-model.iml" beforeDir="false" afterPath="$PROJECT_DIR$/kite-model/kite-model.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/kite-model/src/main/java/com/zhong/kite/model/util/BaseResult.java" beforeDir="false" afterPath="$PROJECT_DIR$/kite-model/src/main/java/com/zhong/kite/model/util/BaseResult.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/kite-model/target/classes/com/zhong/kite/model/util/BaseResult.class" beforeDir="false" afterPath="$PROJECT_DIR$/kite-model/target/classes/com/zhong/kite/model/util/BaseResult.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/kite-model/target/kite-model-1.0-SNAPSHOT-sources.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/kite-model/target/kite-model-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/kite-model/target/kite-model-1.0-SNAPSHOT.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/kite-model/target/maven-archiver/pom.properties" beforeDir="false" afterPath="$PROJECT_DIR$/kite-model/target/maven-archiver/pom.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/kite-model/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/kite-model/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/kite-model/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/kite-model/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/kite-remote/kite-remote.iml" beforeDir="false" afterPath="$PROJECT_DIR$/kite-remote/kite-remote.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/kite-remote/target/kite-remote-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/kite-remote/target/kite-remote-1.0-SNAPSHOT.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/kite-remote/target/maven-archiver/pom.properties" beforeDir="false" afterPath="$PROJECT_DIR$/kite-remote/target/maven-archiver/pom.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/kite-remote/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/kite-repo/kite-repo.iml" beforeDir="false" afterPath="$PROJECT_DIR$/kite-repo/kite-repo.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/kite-repo/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/kite-repo/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/kite-repo/src/main/java/com/zhong/kite/repo/UserRepo.java" beforeDir="false" afterPath="$PROJECT_DIR$/kite-repo/src/main/java/com/zhong/kite/repo/UserRepo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/kite-repo/target/classes/com/zhong/kite/repo/UserRepo.class" beforeDir="false" afterPath="$PROJECT_DIR$/kite-repo/target/classes/com/zhong/kite/repo/UserRepo.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/kite-repo/target/kite-repo-1.0-SNAPSHOT-sources.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/kite-repo/target/kite-repo-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/kite-repo/target/kite-repo-1.0-SNAPSHOT.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/kite-repo/target/maven-archiver/pom.properties" beforeDir="false" afterPath="$PROJECT_DIR$/kite-repo/target/maven-archiver/pom.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/kite-service/kite-service.iml" beforeDir="false" afterPath="$PROJECT_DIR$/kite-service/kite-service.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/kite-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/kite-service/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/kite-service/src/main/java/com/zhong/kite/Impl/UserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/kite-service/src/main/java/com/zhong/kite/Impl/UserServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/kite-service/src/main/java/com/zhong/kite/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/kite-service/src/main/java/com/zhong/kite/UserService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/kite-service/target/classes/com/zhong/kite/Impl/UserServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/kite-service/target/classes/com/zhong/kite/Impl/UserServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/kite-service/target/classes/com/zhong/kite/UserService.class" beforeDir="false" afterPath="$PROJECT_DIR$/kite-service/target/classes/com/zhong/kite/UserService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/kite-service/target/kite-service-1.0-SNAPSHOT-sources.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/kite-service/target/kite-service-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/kite-service/target/kite-service-1.0-SNAPSHOT.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/kite-service/target/maven-archiver/pom.properties" beforeDir="false" afterPath="$PROJECT_DIR$/kite-service/target/maven-archiver/pom.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/kite-service/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/kite-service/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/kite-web/kite-web.iml" beforeDir="false" afterPath="$PROJECT_DIR$/kite-web/kite-web.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/kite-web/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/kite-web/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/kite-web/src/main/java/com/zhong/kite/controller/KiteApplication.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/kite-web/src/main/java/com/zhong/kite/controller/web/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/kite-web/src/main/java/com/zhong/kite/controller/web/UserController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/kite-web/src/main/resources/application.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/kite-web/src/main/webapp/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/kite-web/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/kite-web/target/classes/application.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/kite-web/target/classes/com/zhong/kite/controller/KiteApplication.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/kite-web/target/classes/com/zhong/kite/controller/web/UserController.class" beforeDir="false" afterPath="$PROJECT_DIR$/kite-web/target/classes/com/zhong/kite/controller/web/UserController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/kite-web/target/kite-web-1.0-SNAPSHOT-sources.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/kite-web/target/kite-web-1.0-SNAPSHOT.war" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/kite-web/target/kite-web-1.0-SNAPSHOT.war.original" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/kite-web/target/kite-web-1.0-SNAPSHOT/WEB-INF/classes/application.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/kite-web/target/kite-web-1.0-SNAPSHOT/WEB-INF/classes/com/zhong/kite/controller/KiteApplication.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/kite-web/target/kite-web-1.0-SNAPSHOT/WEB-INF/classes/com/zhong/kite/controller/web/HelloController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/kite-web/target/kite-web-1.0-SNAPSHOT/WEB-INF/classes/com/zhong/kite/controller/web/UserController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/kite-web/target/kite-web-1.0-SNAPSHOT/WEB-INF/classes/spring/config.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/kite-web/target/kite-web-1.0-SNAPSHOT/WEB-INF/classes/spring/spring-kite-biz.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/kite-web/target/kite-web-1.0-SNAPSHOT/WEB-INF/classes/spring/spring-kite-mybatis.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/kite-web/target/kite-web-1.0-SNAPSHOT/WEB-INF/lib/classmate-1.3.4.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/kite-web/target/kite-web-1.0-SNAPSHOT/WEB-INF/lib/commons-dbcp-1.4.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/kite-web/target/kite-web-1.0-SNAPSHOT/WEB-INF/lib/commons-lang3-3.3.2.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/kite-web/target/kite-web-1.0-SNAPSHOT/WEB-INF/lib/commons-logging-1.1.1.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/kite-web/target/kite-web-1.0-SNAPSHOT/WEB-INF/lib/commons-pool-1.6.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/kite-web/target/kite-web-1.0-SNAPSHOT/WEB-INF/lib/hamcrest-core-1.3.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/kite-web/target/kite-web-1.0-SNAPSHOT/WEB-INF/lib/hibernate-validator-5.3.5.Final.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/kite-web/target/kite-web-1.0-SNAPSHOT/WEB-INF/lib/jackson-annotations-2.8.0.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/kite-web/target/kite-web-1.0-SNAPSHOT/WEB-INF/lib/jackson-core-2.8.10.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/kite-web/target/kite-web-1.0-SNAPSHOT/WEB-INF/lib/jackson-databind-2.8.10.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/kite-web/target/kite-web-1.0-SNAPSHOT/WEB-INF/lib/jboss-logging-3.3.1.Final.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/kite-web/target/kite-web-1.0-SNAPSHOT/WEB-INF/lib/jcl-over-slf4j-1.7.25.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/kite-web/target/kite-web-1.0-SNAPSHOT/WEB-INF/lib/jul-to-slf4j-1.7.25.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/kite-web/target/kite-web-1.0-SNAPSHOT/WEB-INF/lib/junit-4.12.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/kite-web/target/kite-web-1.0-SNAPSHOT/WEB-INF/lib/kite-dao-1.0-SNAPSHOT.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/kite-web/target/kite-web-1.0-SNAPSHOT/WEB-INF/lib/kite-model-1.0-SNAPSHOT.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/kite-web/target/kite-web-1.0-SNAPSHOT/WEB-INF/lib/kite-repo-1.0-SNAPSHOT.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/kite-web/target/kite-web-1.0-SNAPSHOT/WEB-INF/lib/kite-service-1.0-SNAPSHOT.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/kite-web/target/kite-web-1.0-SNAPSHOT/WEB-INF/lib/log4j-over-slf4j-1.7.25.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/kite-web/target/kite-web-1.0-SNAPSHOT/WEB-INF/lib/logback-classic-1.2.3.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/kite-web/target/kite-web-1.0-SNAPSHOT/WEB-INF/lib/logback-core-1.1.11.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/kite-web/target/kite-web-1.0-SNAPSHOT/WEB-INF/lib/mybatis-3.4.5.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/kite-web/target/kite-web-1.0-SNAPSHOT/WEB-INF/lib/mybatis-spring-1.3.1.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/kite-web/target/kite-web-1.0-SNAPSHOT/WEB-INF/lib/mybatis-spring-boot-autoconfigure-1.3.1.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/kite-web/target/kite-web-1.0-SNAPSHOT/WEB-INF/lib/mybatis-spring-boot-starter-1.3.1.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/kite-web/target/kite-web-1.0-SNAPSHOT/WEB-INF/lib/mysql-connector-java-5.1.35.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/kite-web/target/kite-web-1.0-SNAPSHOT/WEB-INF/lib/slf4j-api-1.7.25.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/kite-web/target/kite-web-1.0-SNAPSHOT/WEB-INF/lib/snakeyaml-1.17.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/kite-web/target/kite-web-1.0-SNAPSHOT/WEB-INF/lib/spring-aop-4.3.12.RELEASE.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/kite-web/target/kite-web-1.0-SNAPSHOT/WEB-INF/lib/spring-beans-4.3.12.RELEASE.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/kite-web/target/kite-web-1.0-SNAPSHOT/WEB-INF/lib/spring-boot-1.5.8.RELEASE.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/kite-web/target/kite-web-1.0-SNAPSHOT/WEB-INF/lib/spring-boot-autoconfigure-1.5.8.RELEASE.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/kite-web/target/kite-web-1.0-SNAPSHOT/WEB-INF/lib/spring-boot-starter-1.5.8.RELEASE.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/kite-web/target/kite-web-1.0-SNAPSHOT/WEB-INF/lib/spring-boot-starter-jdbc-1.5.8.RELEASE.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/kite-web/target/kite-web-1.0-SNAPSHOT/WEB-INF/lib/spring-boot-starter-logging-1.5.8.RELEASE.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/kite-web/target/kite-web-1.0-SNAPSHOT/WEB-INF/lib/spring-boot-starter-tomcat-1.5.8.RELEASE.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/kite-web/target/kite-web-1.0-SNAPSHOT/WEB-INF/lib/spring-boot-starter-web-1.5.8.RELEASE.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/kite-web/target/kite-web-1.0-SNAPSHOT/WEB-INF/lib/spring-context-4.3.12.RELEASE.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/kite-web/target/kite-web-1.0-SNAPSHOT/WEB-INF/lib/spring-core-4.3.12.RELEASE.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/kite-web/target/kite-web-1.0-SNAPSHOT/WEB-INF/lib/spring-core-4.3.4.RELEASE.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/kite-web/target/kite-web-1.0-SNAPSHOT/WEB-INF/lib/spring-core-5.0.4.RELEASE.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/kite-web/target/kite-web-1.0-SNAPSHOT/WEB-INF/lib/spring-expression-4.3.12.RELEASE.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/kite-web/target/kite-web-1.0-SNAPSHOT/WEB-INF/lib/spring-jcl-5.0.4.RELEASE.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/kite-web/target/kite-web-1.0-SNAPSHOT/WEB-INF/lib/spring-jdbc-4.3.12.RELEASE.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/kite-web/target/kite-web-1.0-SNAPSHOT/WEB-INF/lib/spring-test-4.3.12.RELEASE.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/kite-web/target/kite-web-1.0-SNAPSHOT/WEB-INF/lib/spring-tx-4.3.12.RELEASE.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/kite-web/target/kite-web-1.0-SNAPSHOT/WEB-INF/lib/spring-web-4.3.12.RELEASE.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/kite-web/target/kite-web-1.0-SNAPSHOT/WEB-INF/lib/spring-webmvc-4.3.12.RELEASE.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/kite-web/target/kite-web-1.0-SNAPSHOT/WEB-INF/lib/tomcat-annotations-api-8.5.23.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/kite-web/target/kite-web-1.0-SNAPSHOT/WEB-INF/lib/tomcat-embed-core-8.5.23.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/kite-web/target/kite-web-1.0-SNAPSHOT/WEB-INF/lib/tomcat-embed-el-8.5.23.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/kite-web/target/kite-web-1.0-SNAPSHOT/WEB-INF/lib/tomcat-embed-websocket-8.5.23.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/kite-web/target/kite-web-1.0-SNAPSHOT/WEB-INF/lib/tomcat-jdbc-8.5.23.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/kite-web/target/kite-web-1.0-SNAPSHOT/WEB-INF/lib/tomcat-juli-8.5.23.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/kite-web/target/kite-web-1.0-SNAPSHOT/WEB-INF/lib/validation-api-1.1.0.Final.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/kite-web/target/kite-web-1.0-SNAPSHOT/WEB-INF/log4j.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/kite-web/target/kite-web-1.0-SNAPSHOT/WEB-INF/web.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/kite-web/target/maven-archiver/pom.properties" beforeDir="false" afterPath="$PROJECT_DIR$/kite-web/target/maven-archiver/pom.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/kite-web/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/kite-web/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/kite-web/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/kite-web/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/kite.iml" beforeDir="false" afterPath="$PROJECT_DIR$/kite.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-    </list>
+    <list default="true" id="688f92b4-ce55-4cfa-8fc2-f47e44d296d2" name="Default" comment="" />
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
     <ignored path="$PROJECT_DIR$/kite-service/target/" />
@@ -177,8 +38,8 @@
       <file leaf-file-name="package.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/kite-web/src/main/webapp/js/package.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-780">
-              <caret line="129" column="46" lean-forward="true" selection-start-line="129" selection-start-column="46" selection-end-line="129" selection-end-column="46" />
+            <state relative-caret-position="28">
+              <caret line="129" column="46" selection-start-line="129" selection-start-column="46" selection-end-line="129" selection-end-column="46" />
             </state>
           </provider>
         </entry>
@@ -186,8 +47,8 @@
       <file leaf-file-name="index.jsp" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/kite-web/src/main/webapp/index.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="186">
-              <caret line="73" column="42" lean-forward="true" selection-start-line="73" selection-start-column="42" selection-end-line="73" selection-end-column="42" />
+            <state relative-caret-position="2044">
+              <caret line="73" column="42" selection-start-line="73" selection-start-column="42" selection-end-line="73" selection-end-column="42" />
             </state>
           </provider>
         </entry>
@@ -195,8 +56,8 @@
       <file leaf-file-name="myPackage.jsp" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/kite-web/src/main/webapp/WEB-INF/jsp/myPackage.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="392">
-              <caret line="83" lean-forward="true" selection-start-line="83" selection-end-line="83" />
+            <state relative-caret-position="2324">
+              <caret line="83" selection-start-line="83" selection-end-line="83" />
             </state>
           </provider>
         </entry>
@@ -377,7 +238,7 @@
   <component name="NodePackageJsonFileManager">
     <packageJsonPaths />
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="-10" />
     <option name="y" value="-10" />
     <option name="width" value="1939" />
@@ -391,8 +252,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
-      <pane id="AndroidView" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -409,6 +268,8 @@
           <select />
         </subPane>
       </pane>
+      <pane id="AndroidView" />
+      <pane id="Scope" />
       <pane id="PackagesPane" />
     </panes>
   </component>
@@ -727,6 +588,7 @@
       <workItem from="1525513868878" duration="18344000" />
       <workItem from="1526457743672" duration="375000" />
       <workItem from="1530790546946" duration="1767000" />
+      <workItem from="1533214285219" duration="599000" />
     </task>
     <servers />
   </component>
@@ -763,10 +625,10 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="125241000" />
+    <option name="totallyTimeSpent" value="125840000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-7" y="-7" width="1550" height="838" extended-state="7" />
+    <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info anchor="right" id="Palette" order="3" />
@@ -790,7 +652,7 @@
       <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49829206" weight="0.3620438" />
       <window_info anchor="bottom" id="Spring" order="7" />
       <window_info anchor="bottom" id="Terminal" order="7" weight="0.417238" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25637585" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.26040268" />
       <window_info id="Web" order="2" side_tool="true" />
       <window_info anchor="right" id="Theme Preview" order="3" />
       <window_info id="Favorites" order="2" side_tool="true" />
@@ -2325,22 +2187,22 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/kite-web/src/main/webapp/WEB-INF/jsp/myPackage.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="392">
-          <caret line="83" lean-forward="true" selection-start-line="83" selection-end-line="83" />
+        <state relative-caret-position="2324">
+          <caret line="83" selection-start-line="83" selection-end-line="83" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/kite-web/src/main/webapp/index.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="186">
-          <caret line="73" column="42" lean-forward="true" selection-start-line="73" selection-start-column="42" selection-end-line="73" selection-end-column="42" />
+        <state relative-caret-position="2044">
+          <caret line="73" column="42" selection-start-line="73" selection-start-column="42" selection-end-line="73" selection-end-column="42" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/kite-web/src/main/webapp/js/package.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-780">
-          <caret line="129" column="46" lean-forward="true" selection-start-line="129" selection-start-column="46" selection-end-line="129" selection-end-column="46" />
+        <state relative-caret-position="28">
+          <caret line="129" column="46" selection-start-line="129" selection-start-column="46" selection-end-line="129" selection-end-column="46" />
         </state>
       </provider>
     </entry>
