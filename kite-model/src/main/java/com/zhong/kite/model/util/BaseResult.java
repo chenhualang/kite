@@ -10,6 +10,7 @@ public class BaseResult<T> implements Serializable{
         private T result;
 
         public BaseResult() {
+            setCodeSuccess();
         }
 
         public String getCode() {

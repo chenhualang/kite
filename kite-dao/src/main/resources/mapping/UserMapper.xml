@@ -1,76 +1,126 @@
-<?xml version="1.0" encoding="UTF-8" ?>
-<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
-<mapper namespace="com.zhong.kite.mapper.UserDAO" >
-  <resultMap id="BaseResultMap" type="com.zhong.kite.model.User" >
-    <id column="cuserid" property="cuserid" jdbcType="INTEGER" />
-    <result column="usercode" property="usercode" jdbcType="VARCHAR" />
-    <result column="username" property="username" jdbcType="VARCHAR" />
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.zhong.kite.mapper.UserDAO">
+  <resultMap id="BaseResultMap" type="com.zhong.kite.DO.UserDO">
+    <id column="userid" jdbcType="INTEGER" property="userId" />
+    <result column="usercode" jdbcType="VARCHAR" property="userCode" />
+    <result column="username" jdbcType="VARCHAR" property="userName" />
   </resultMap>
-  <sql id="Base_Column_List" >
-    cuserid, usercode, username
+  <sql id="Base_Column_List">
+    userid, usercode, username
   </sql>
-  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Integer" >
+  <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
     select 
     <include refid="Base_Column_List" />
     from t_user
-    where cuserid = #{cuserid,jdbcType=INTEGER}
+    where userid = #{userid,jdbcType=INTEGER}
   </select>
-  <select id="findAllUsers" resultMap="BaseResultMap">
+  <select id="findAllUsers" resultMap="BaseResultMap" parameterType="com.zhong.kite.model.UserDTO">
     select
     <include refid="Base_Column_List" />
     from t_user
+    <where>
+      <if test="userCode!= null">
+        and usercode=#{userCode}
+      </if>
+      <if test="userName!=null">
+        and username like concat(concat('%',#{userName}),'%')
+      </if>
+    </where>
   </select>
-  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer" >
+  <select id="getUserCount" resultType="int" parameterType="com.zhong.kite.model.UserDTO">
+    select count(*)
+    from t_user
+    <where>
+      <if test="userCode!= null">
+        and usercode=#{userCode}
+      </if>
+      <if test="userName!=null">
+        and username like concat(concat('%',#{userName}),'%')
+      </if>
+    </where>
+  </select>
+  <select id="getUserList" parameterType="com.zhong.kite.model.UserDTO" resultMap="BaseResultMap">
+    select
+    <include refid="Base_Column_List" />
+    from t_user
+    <where>
+      <if test="userCode!= null">
+        and usercode=#{userCode}
+      </if>
+      <if test="userName!=null">
+        and username like concat(concat('%',#{userName}),'%')
+      </if>
+    </where>
+    order by userid limit #{offset},#{pageSize}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
     delete from t_user
-    where cuserid = #{cuserid,jdbcType=INTEGER}
+    where userid = #{userid,jdbcType=INTEGER}
   </delete>
-  <insert id="insert" parameterType="com.zhong.kite.model.User" >
-    insert into t_user (cuserid, usercode, username
+  <delete id="delUser" parameterType="java.lang.Integer" >
+    delete from t_user
+    where userid = #{id,jdbcType=INTEGER}
+  </delete>
+  <insert id="addUser" parameterType="com.zhong.kite.DO.UserDO">
+    insert into t_user (userid, usercode, username
       )
-    values (#{cuserid,jdbcType=INTEGER}, #{usercode,jdbcType=VARCHAR}, #{username,jdbcType=VARCHAR}
+    values (#{useId,jdbcType=INTEGER}, #{userCode,jdbcType=VARCHAR}, #{userName,jdbcType=VARCHAR}
       )
   </insert>
-  <insert id="insertSelective" parameterType="com.zhong.kite.model.User" >
+  <insert id="insertSelective" parameterType="com.zhong.kite.model.UserDTO">
     insert into t_user
-    <trim prefix="(" suffix=")" suffixOverrides="," >
-      <if test="cuserid != null" >
-        cuserid,
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="userid != null">
+        userid,
       </if>
-      <if test="usercode != null" >
+      <if test="usercode != null">
         usercode,
       </if>
-      <if test="username != null" >
+      <if test="username != null">
         username,
       </if>
     </trim>
-    <trim prefix="values (" suffix=")" suffixOverrides="," >
-      <if test="cuserid != null" >
-        #{cuserid,jdbcType=INTEGER},
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="userid != null">
+        #{userid,jdbcType=INTEGER},
       </if>
-      <if test="usercode != null" >
+      <if test="usercode != null">
         #{usercode,jdbcType=VARCHAR},
       </if>
-      <if test="username != null" >
+      <if test="username != null">
         #{username,jdbcType=VARCHAR},
       </if>
     </trim>
   </insert>
-  <update id="updateByPrimaryKeySelective" parameterType="com.zhong.kite.model.User" >
+  <update id="updateByPrimaryKeySelective" parameterType="com.zhong.kite.model.UserDTO">
     update t_user
-    <set >
-      <if test="usercode != null" >
+    <set>
+      <if test="usercode != null">
         usercode = #{usercode,jdbcType=VARCHAR},
       </if>
-      <if test="username != null" >
+      <if test="username != null">
         username = #{username,jdbcType=VARCHAR},
       </if>
     </set>
-    where cuserid = #{cuserid,jdbcType=INTEGER}
+    where userid = #{userid,jdbcType=INTEGER}
   </update>
-  <update id="updateByPrimaryKey" parameterType="com.zhong.kite.model.User" >
+  <update id="updateByPrimaryKey" parameterType="com.zhong.kite.model.UserDTO">
     update t_user
     set usercode = #{usercode,jdbcType=VARCHAR},
       username = #{username,jdbcType=VARCHAR}
-    where cuserid = #{cuserid,jdbcType=INTEGER}
+    where userid = #{userid,jdbcType=INTEGER}
+  </update>
+  <update id="updateUser" parameterType="com.zhong.kite.DO.UserDO">
+    update t_user
+    <set >
+      <if test="userCode != null" >
+        usercode = #{userCode,jdbcType=VARCHAR},
+      </if>
+      <if test="userName != null" >
+        username = #{userName,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where userid = #{userId,jdbcType=INTEGER}
   </update>
 </mapper>

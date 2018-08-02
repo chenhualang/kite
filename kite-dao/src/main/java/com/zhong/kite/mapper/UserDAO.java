@@ -1,21 +1,32 @@
 package com.zhong.kite.mapper;
 
-import com.zhong.kite.model.User;
+import com.zhong.kite.DO.UserDO;
+import com.zhong.kite.model.UserDTO;
 
 import java.util.List;
 
 public interface UserDAO {
     int deleteByPrimaryKey(Integer cuserid);
 
-    int insert(User record);
+    int insert(UserDTO record);
 
-    int insertSelective(User record);
+    int insertSelective(UserDTO record);
 
-    User selectByPrimaryKey(Integer cuserid);
+    UserDTO selectByPrimaryKey(Integer cuserid);
 
-    int updateByPrimaryKeySelective(User record);
+    int updateByPrimaryKeySelective(UserDTO record);
 
-    int updateByPrimaryKey(User record);
+    int updateByPrimaryKey(UserDTO record);
 
-    List<User> findAllUsers();
+    List<UserDTO> findAllUsers();
+
+    int getUserCount(UserDTO record);
+
+    List<UserDO> getUserList(UserDTO record);
+
+    int delUser(int id);
+
+    int addUser(UserDO user);
+
+    int updateUser(UserDO userDO);
 }
