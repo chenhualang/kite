@@ -1,5 +1,9 @@
 package com.zhong.kite.DO;
 
+import lombok.Data;
+
+import java.util.Date;
+@Data
 public class UserDO {
     private Integer userId;
 
@@ -7,27 +11,8 @@ public class UserDO {
 
     private String userName;
 
-    public Integer getUserId() {
-        return userId;
-    }
+    private Date createTime;
 
-    public void setUserId(Integer userId) {
-        this.userId = userId;
-    }
+    private Date modifiedTime;
 
-    public String getUserCode() {
-        return userCode;
-    }
-
-    public void setUserCode(String userCode) {
-        this.userCode = userCode;
-    }
-
-    public String getUserName() {
-        return userName;
-    }
-
-    public void setUserName(String userName) {
-        this.userName = userName;
-    }
 }

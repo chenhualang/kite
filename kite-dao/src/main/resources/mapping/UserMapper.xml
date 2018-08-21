@@ -5,6 +5,8 @@
     <id column="userid" jdbcType="INTEGER" property="userId" />
     <result column="usercode" jdbcType="VARCHAR" property="userCode" />
     <result column="username" jdbcType="VARCHAR" property="userName" />
+    <result column="createTime" jdbcType="VARCHAR" property="createTime" />
+    <result column="modifiedTime" jdbcType="VARCHAR" property="modifiedTime" />
   </resultMap>
   <sql id="Base_Column_List">
     userid, usercode, username
@@ -65,7 +67,7 @@
   <insert id="addUser" parameterType="com.zhong.kite.DO.UserDO">
     insert into t_user (userid, usercode, username
       )
-    values (#{useId,jdbcType=INTEGER}, #{userCode,jdbcType=VARCHAR}, #{userName,jdbcType=VARCHAR}
+    values (#{userId,jdbcType=INTEGER}, #{userCode,jdbcType=VARCHAR}, #{userName,jdbcType=VARCHAR}
       )
   </insert>
   <insert id="insertSelective" parameterType="com.zhong.kite.model.UserDTO">

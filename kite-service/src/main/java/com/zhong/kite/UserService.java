@@ -14,4 +14,6 @@ public interface UserService {
     int addUser(UserDO user);
 
     int updateUser(UserDO userDO);
+
+    int delUser(int id);
 }

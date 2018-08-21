@@ -59,6 +59,13 @@ public class UserServiceImpl implements UserService {
         return userRepo.updateUser(userDO);
     }
 
+    @Override
+    public int delUser(int id) {
+      int i=0;
+      i=userRepo.delUser(id);
+      return i;
+    }
+
 //    public BaseResult<List<User>> findUsers(){
 //        BaseResult<List<User>> result = new BaseResult<>();
 //        List<User> users = userRepo.findUsers();

@@ -51,7 +51,8 @@ var TableInit = function () {
                 title: '部门名称'
             },{
                 field: 'userName',
-                title: '描述'
+                title: '描述',
+                formatter: operateFormatter,
             }]
         });
     };
@@ -118,6 +119,90 @@ function delMany(){
     }
 }
 
+function operateFormatter(value, row, index) {
+    return ['<button type="button" class=" btn btn-primary" onclick="getRole(' + row.userId + ')">角色</button>&nbsp;&nbsp;&nbsp;',
+        '<button type="button" class=" btn btn-info" onclick="getValue(' + row.userId + ')">修改</button>',
+        '&nbsp;&nbsp;&nbsp;<button class=" btn btn-danger" type="button" onclick="delUser(' + row.userId + ')">删除</button>'
+    ].join('');
+}
+
+    //删除员工
+function delUser(id){
+        if(confirm("您确定要删除这条数据吗?")){
+            $.ajax({
+                url:'/kite/users/delUser.action',
+                dataType:'json',
+                type:'post',
+                data:{uid:id},
+                success:function(data){
+                    if(data>0){
+                        alert("删除成功！");
+                    }else{
+                        alert("删除失败！");
+                    }
+                    $("#test-table").bootstrapTable('refresh');
+                },
+                error:function(){
+                    alert("请求失败！");
+                }
+            });
+        }
+    }
+
+//修改用户
+function upUser(){
+    if($("#myform1").data("bootstrapValidator").validate().isValid()){
+        $.ajax({
+            url:'/kite/users/upUser.action',
+            dataType:'json',
+            type:'post',
+            data:$("#myform1").serialize(),
+            success:function(data){
+                if(data>0){
+                    alert("修改成功！");
+                }else{
+                    alert("修改失败！");
+                }
+                closeDlg();
+                $("#test-table").bootstrapTable('refresh');
+            }
+        });
+    }else{
+        alert("请按规则填写信息");
+    }
+}
+
+//添加用户
+function saveUser(){
+    var msg=$("#mid").text();
+    if(msg=="此账号可用"){
+        if($("#myform").data('bootstrapValidator').validate().isValid()){
+            $.ajax({
+                url:'/kite/users/saveUser.action',
+                type:'post',
+                dataType:'json',
+                data:$("#myform").serialize(),
+                success:function(data){
+                    if(data>0){
+                        alert("添加成功！");
+                    }else{
+                        alert("添加失败！");
+                    }
+                    $("#test-table").bootstrapTable('refresh');
+                    closeDlg();
+                },
+                error:function(){
+                    alert("请求失败");
+                }
+            });
+        }else{
+            alert("请填写合法信息");
+        }
+    }else{
+        alert("请填写合法信息");
+    }
+}
+
 //条件查询
 function getUserByCon(){
 
@@ -167,7 +252,8 @@ function getUserByCon(){
             title: '部门名称'
         },{
             field: 'userName',
-            title: '描述'
+            title: '描述',
+            formatter: operateFormatter,
         }]
     });
 }

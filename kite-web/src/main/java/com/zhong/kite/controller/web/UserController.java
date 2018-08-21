@@ -7,6 +7,7 @@ import com.zhong.kite.controller.VO.UserVO;
 import com.zhong.kite.model.UserDTO;
 import com.zhong.kite.model.util.BaseResult;
 import lombok.extern.java.Log;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -18,7 +19,7 @@ import java.util.Map;
 
 @RequestMapping("/users")
 @Controller
-@Log
+@Slf4j
 public class UserController {
     @Autowired
     private UserService userService;
@@ -41,6 +42,19 @@ public class UserController {
         int i=userService.delUsers(ids);
         return i;
     }
+
+    /**
+     * 删除用户
+     * @param id
+     * @return
+     */
+    @ResponseBody
+    @RequestMapping("/delUser.action")
+    public int delUser(@RequestParam("uid")int id){
+        int i=userService.delUser(id);
+        return i;
+    }
+
 
     @ResponseBody
     @RequestMapping("/addUser.action")
@@ -72,7 +86,7 @@ public class UserController {
 //        BaseResult<Map<String,Object>> result = userService.findAllUsers(pageNumber, pageSize);
 //        return result;
 //    }
-
+//
 //    @RequestMapping(value = "/query",method = RequestMethod.POST)
 //    public BaseResult<List<User>> queryByCondition(){
 //        return userService.findAllUsers(pageNumber, pageSize);

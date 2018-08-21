@@ -6,6 +6,7 @@ import com.zhong.kite.UserService;
 import com.zhong.kite.controller.VO.UserVO;
 import com.zhong.kite.model.UserDTO;
 import lombok.extern.java.Log;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -17,7 +18,7 @@ import java.util.Map;
 
 @RequestMapping("/")
 @Controller
-@Log
+@Slf4j
 public class NavigationController {
 
     @RequestMapping("/package")
@@ -26,10 +27,10 @@ public class NavigationController {
         return view;
     }
 
-    @RequestMapping("/index")
-    public ModelAndView toIndex(HttpServletRequest request){
-        ModelAndView view = new ModelAndView("index");
-        return view;
-    }
+//    @RequestMapping("/index")
+//    public ModelAndView toIndex(HttpServletRequest request){
+//        ModelAndView view = new ModelAndView("index");
+//        return view;
+//    }
 
 }
