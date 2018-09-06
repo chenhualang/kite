@@ -126,6 +126,49 @@ function operateFormatter(value, row, index) {
     ].join('');
 }
 
+//修改前，打开模态框
+function getValue(id){
+    $.ajax({
+        url:'user/getUserById.action',
+        dataType:'json',
+        type:'post',
+        data:{
+            uid:id
+        },
+        success:function(data){
+            $("#user_id1").val(data.user.user_id);
+            $("#user_account1").val(data.user.user_account);
+            $("#user_password1").val(data.user.user_password);
+            $("#user_name1").val(data.user.user_name);
+            $("#user_age1").val(data.user.user_age);
+            $("#user_address1").val(data.user.user_address);
+            $("#user_birth1").val(data.user.birthStr);
+            $("#email1").val(data.user.email);
+            $("#user_phone1").val(data.user.user_phone);
+
+            if("男"==data.user.user_sex){
+                $("#nan1").prop('checked',true);
+            }else{
+                $("#nv1").prop('checked',true);
+            }
+
+            $("#sid1").empty();
+            $("#sid1").append("<option value='0'>请选择</option>");
+            $.each(data.dept,function(){
+                if(data.user.dept_id==this.dept_id){
+                    $("#sid1").append("<option selected value='"+this.dept_id+"'>"+this.dept_name+"</option>");
+                }else{
+                    $("#sid1").append("<option value='"+this.dept_id+"'>"+this.dept_name+"</option>");
+                }
+            });
+            $("#mydlg1").modal('show');
+        },
+        error:function(){
+            alert('请求失败！');
+        }
+    });
+}
+
     //删除员工
 function delUser(id){
         if(confirm("您确定要删除这条数据吗?")){
@@ -172,6 +215,12 @@ function upUser(){
     }
 }
 
+//添加，打开模态框
+function openDlg(){
+    getDeptList();
+    $("#mydlg").modal('show');
+};
+
 //添加用户
 function saveUser(){
     var msg=$("#mid").text();
@@ -201,6 +250,25 @@ function saveUser(){
     }else{
         alert("请填写合法信息");
     }
+}
+
+//查询所有部门
+function getDeptList(){
+    $.ajax({
+        url:'dept/getDeptList.action',
+        dataType:'json',
+        type:'post',
+        success:function(data){
+            $("#sid").empty();
+            $("#sid").append("<option value='0'>请选择</option>");
+            $.each(data,function(){
+                $("#sid").append("<option value='"+this.dept_id+"'>"+this.dept_name+"</option>");
+            });
+        },
+        error:function(){
+            alert("请求失败!");
+        }
+    });
 }
 
 //条件查询

@@ -5,8 +5,8 @@
     <id column="userid" jdbcType="INTEGER" property="userId" />
     <result column="usercode" jdbcType="VARCHAR" property="userCode" />
     <result column="username" jdbcType="VARCHAR" property="userName" />
-    <result column="createTime" jdbcType="VARCHAR" property="createTime" />
-    <result column="modifiedTime" jdbcType="VARCHAR" property="modifiedTime" />
+    <result column="createtime" jdbcType="VARCHAR" property="createTime" />
+    <result column="modifiedtime" jdbcType="VARCHAR" property="modifiedTime" />
   </resultMap>
   <sql id="Base_Column_List">
     userid, usercode, username
@@ -15,7 +15,7 @@
     select 
     <include refid="Base_Column_List" />
     from t_user
-    where userid = #{userid,jdbcType=INTEGER}
+    where userid = #{userId,jdbcType=INTEGER}
   </select>
   <select id="findAllUsers" resultMap="BaseResultMap" parameterType="com.zhong.kite.model.UserDTO">
     select
@@ -58,71 +58,89 @@
   </select>
   <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
     delete from t_user
-    where userid = #{userid,jdbcType=INTEGER}
+    where userid = #{userId,jdbcType=INTEGER}
   </delete>
   <delete id="delUser" parameterType="java.lang.Integer" >
     delete from t_user
     where userid = #{id,jdbcType=INTEGER}
   </delete>
-  <insert id="addUser" parameterType="com.zhong.kite.DO.UserDO">
-    insert into t_user (userid, usercode, username
-      )
-    values (#{userId,jdbcType=INTEGER}, #{userCode,jdbcType=VARCHAR}, #{userName,jdbcType=VARCHAR}
-      )
-  </insert>
-  <insert id="insertSelective" parameterType="com.zhong.kite.model.UserDTO">
+  <!--<insert id="addUser" parameterType="com.zhong.kite.DO.UserDO">-->
+    <!--insert into t_user (userid, usercode, username-->
+      <!--)-->
+    <!--values (#{userId,jdbcType=INTEGER}, #{userCode,jdbcType=VARCHAR}, #{userName,jdbcType=VARCHAR}-->
+      <!--)-->
+  <!--</insert>-->
+  <insert id="addUser" parameterType="com.zhong.kite.model.UserDTO">
     insert into t_user
     <trim prefix="(" suffix=")" suffixOverrides=",">
-      <if test="userid != null">
+      <if test="userId != null">
         userid,
       </if>
-      <if test="usercode != null">
+      <if test="userCode != null">
         usercode,
       </if>
-      <if test="username != null">
+      <if test="userName != null">
         username,
+      </if>
+      <if test="createTime != null">
+        createtime,
+      </if>
+      <if test="modifiedTime != null">
+        modifiedtime,
       </if>
     </trim>
     <trim prefix="values (" suffix=")" suffixOverrides=",">
-      <if test="userid != null">
-        #{userid,jdbcType=INTEGER},
+      <if test="userId != null">
+        #{userId,jdbcType=INTEGER},
       </if>
-      <if test="usercode != null">
-        #{usercode,jdbcType=VARCHAR},
+      <if test="userCode != null">
+        #{userCode,jdbcType=VARCHAR},
       </if>
-      <if test="username != null">
-        #{username,jdbcType=VARCHAR},
+      <if test="userName != null">
+        #{userName,jdbcType=VARCHAR},
+      </if>
+      <if test="createTime != null">
+        #{createTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="modifiedTime != null">
+        #{modifiedTime,jdbcType=TIMESTAMP},
       </if>
     </trim>
   </insert>
-  <update id="updateByPrimaryKeySelective" parameterType="com.zhong.kite.model.UserDTO">
+  <update id="updateUser" parameterType="com.zhong.kite.model.UserDTO">
     update t_user
     <set>
-      <if test="usercode != null">
-        usercode = #{usercode,jdbcType=VARCHAR},
-      </if>
-      <if test="username != null">
-        username = #{username,jdbcType=VARCHAR},
-      </if>
-    </set>
-    where userid = #{userid,jdbcType=INTEGER}
-  </update>
-  <update id="updateByPrimaryKey" parameterType="com.zhong.kite.model.UserDTO">
-    update t_user
-    set usercode = #{usercode,jdbcType=VARCHAR},
-      username = #{username,jdbcType=VARCHAR}
-    where userid = #{userid,jdbcType=INTEGER}
-  </update>
-  <update id="updateUser" parameterType="com.zhong.kite.DO.UserDO">
-    update t_user
-    <set >
-      <if test="userCode != null" >
+      <if test="userCode != null">
         usercode = #{userCode,jdbcType=VARCHAR},
       </if>
-      <if test="userName != null" >
+      <if test="userName != null">
         username = #{userName,jdbcType=VARCHAR},
+      </if>
+      <if test="createTime != null">
+        createtime = #{createTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="modifiedTime != null">
+        modifiedtime = #{modifiedTime,jdbcType=TIMESTAMP},
       </if>
     </set>
     where userid = #{userId,jdbcType=INTEGER}
   </update>
+  <update id="updateByPrimaryKey" parameterType="com.zhong.kite.model.UserDTO">
+    update t_user
+    set usercode = #{userCode,jdbcType=VARCHAR},
+      username = #{userName,jdbcType=VARCHAR}
+    where userid = #{userId,jdbcType=INTEGER}
+  </update>
+  <!--<update id="updateUser" parameterType="com.zhong.kite.DO.UserDO">-->
+    <!--update t_user-->
+    <!--<set >-->
+      <!--<if test="userCode != null" >-->
+        <!--usercode = #{userCode,jdbcType=VARCHAR},-->
+      <!--</if>-->
+      <!--<if test="userName != null" >-->
+        <!--username = #{userName,jdbcType=VARCHAR},-->
+      <!--</if>-->
+    <!--</set>-->
+    <!--where userid = #{userId,jdbcType=INTEGER}-->
+  <!--</update>-->
 </mapper>

@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.zhong.kite.mapper.AccountInfoDAO">
+  <resultMap id="BaseResultMap" type="com.zhong.kite.DO.AccountInfoDO">
+    <id column="id" jdbcType="INTEGER" property="id" />
+    <result column="nickname" jdbcType="VARCHAR" property="nickname" />
+    <result column="APT" jdbcType="VARCHAR" property="apt" />
+    <result column="coupon_count" jdbcType="INTEGER" property="couponCount" />
+    <result column="mail_address" jdbcType="VARCHAR" property="mailAddress" />
+    <result column="cellphone" jdbcType="VARCHAR" property="cellphone" />
+    <result column="password" jdbcType="VARCHAR" property="password" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    id, nickname, APT, coupon_count, mail_address, cellphone, password
+  </sql>
+  <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from account_info
+    where id = #{id,jdbcType=INTEGER}
+  </select>
+  <select id="getAccountInfoList" parameterType="com.zhong.kite.model.AccountInfoDTO" resultMap="BaseResultMap">
+    select
+    <include refid="Base_Column_List" />
+    from account_info
+    <where>
+      <if test="mailAddress!= null">
+        and mail_address=#{mailAddress}
+      </if>
+      <if test="cellphone!= null">
+        and cellphone=#{cellphone}
+      </if>
+      <if test="password!= null">
+        and password=#{password}
+      </if>
+    </where>
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
+    delete from account_info
+    where id = #{id,jdbcType=INTEGER}
+  </delete>
+  <insert id="insert" parameterType="com.zhong.kite.model.AccountInfoDTO">
+    insert into account_info (id, nickname, APT, 
+      coupon_count, mail_address, cellphone, 
+      password)
+    values (#{id,jdbcType=INTEGER}, #{nickname,jdbcType=VARCHAR}, #{apt,jdbcType=VARCHAR}, 
+      #{couponCount,jdbcType=INTEGER}, #{mailAddress,jdbcType=VARCHAR}, #{cellphone,jdbcType=VARCHAR}, 
+      #{password,jdbcType=VARCHAR})
+  </insert>
+  <insert id="addAccountInfo" parameterType="com.zhong.kite.model.AccountInfoDTO">
+    insert into account_info
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        id,
+      </if>
+      <if test="nickname != null">
+        nickname,
+      </if>
+      <if test="apt != null">
+        APT,
+      </if>
+      <if test="couponCount != null">
+        coupon_count,
+      </if>
+      <if test="mailAddress != null">
+        mail_address,
+      </if>
+      <if test="cellphone != null">
+        cellphone,
+      </if>
+      <if test="password != null">
+        password,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        #{id,jdbcType=INTEGER},
+      </if>
+      <if test="nickname != null">
+        #{nickname,jdbcType=VARCHAR},
+      </if>
+      <if test="apt != null">
+        #{apt,jdbcType=VARCHAR},
+      </if>
+      <if test="couponCount != null">
+        #{couponCount,jdbcType=INTEGER},
+      </if>
+      <if test="mailAddress != null">
+        #{mailAddress,jdbcType=VARCHAR},
+      </if>
+      <if test="cellphone != null">
+        #{cellphone,jdbcType=VARCHAR},
+      </if>
+      <if test="password != null">
+        #{password,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateAccountInfo" parameterType="com.zhong.kite.model.AccountInfoDTO">
+    update account_info
+    <set>
+      <if test="nickname != null">
+        nickname = #{nickname,jdbcType=VARCHAR},
+      </if>
+      <if test="apt != null">
+        APT = #{apt,jdbcType=VARCHAR},
+      </if>
+      <if test="couponCount != null">
+        coupon_count = #{couponCount,jdbcType=INTEGER},
+      </if>
+      <if test="mailAddress != null">
+        mail_address = #{mailAddress,jdbcType=VARCHAR},
+      </if>
+      <if test="cellphone != null">
+        cellphone = #{cellphone,jdbcType=VARCHAR},
+      </if>
+      <if test="password != null">
+        password = #{password,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.zhong.kite.model.AccountInfoDTO">
+    update account_info
+    set nickname = #{nickname,jdbcType=VARCHAR},
+      APT = #{apt,jdbcType=VARCHAR},
+      coupon_count = #{couponCount,jdbcType=INTEGER},
+      mail_address = #{mailAddress,jdbcType=VARCHAR},
+      cellphone = #{cellphone,jdbcType=VARCHAR},
+      password = #{password,jdbcType=VARCHAR}
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+</mapper>

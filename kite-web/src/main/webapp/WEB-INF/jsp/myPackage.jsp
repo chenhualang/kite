@@ -3,22 +3,8 @@
 <html lang="en">
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-	<title>XXXXX有限公司管理后台 - 源码之家</title>
-
-	<link rel="stylesheet" href="${pageContext.request.contextPath}/css/index.css" type="text/css" media="screen" />
-
-	<link rel="stylesheet" href="${pageContext.request.contextPath}/css/bootstrap.min.css" />
-	<link rel="stylesheet" href="${pageContext.request.contextPath}/css/bootstrap-table.css" />
-
-	<script type="text/javascript" src="${pageContext.request.contextPath}/js/jquery.min.js"></script>
-	<script type="text/javascript" src="${pageContext.request.contextPath}/js/tendina.min.js"></script>
-	<script type="text/javascript" src="${pageContext.request.contextPath}/js/common.js"></script>
-
-	<script src="${pageContext.request.contextPath}/js/bootstrap.min.js"></script>
-	<script src="${pageContext.request.contextPath}/js/bootstrap-table.js"></script>
-	<script src="${pageContext.request.contextPath}/js/bootstrap-table-zh-CN.js"></script>
+	<title>国际物流包裹后台管理</title>
 	<script src="${pageContext.request.contextPath}/js/package.js"></script>
-
 
 </head>
 <body>
@@ -113,7 +99,7 @@
 
 	<!--toolbar  -->
 	<div id="toolbar" class="btn-toolbar">
-		<button onclick="add()" type="button" class="btn btn-success">
+		<button onclick="openDlg()" type="button" class="btn btn-success">
 			<span class="glyphicon glyphicon-plus" aria-hidden="true" >添加</span>
 		</button>
 		<button onclick="ImportExcel()" type="button" class="btn btn-success">

@@ -1,0 +1,29 @@
+commit 3d974460ed99de3f9b09273e875062c681d61918
+Author: chenhualang <hualang.chen@sap.com>
+Date:   Tue Aug 21 20:43:47 2018 +0800
+
+    update .gitignore
+
+commit 3d02d244721656783ed9be360c652494638b8c0f
+Author: chenhualang <hualang.chen@sap.com>
+Date:   Thu Aug 2 21:07:06 2018 +0800
+
+    second commit
+
+commit eb78a85c3f672cc542c2fc2d8254dc5b3acdf427
+Author: chenhualang <hualang.chen@sap.com>
+Date:   Thu Aug 2 20:55:57 2018 +0800
+
+    first commit
+
+commit fa80de7e93c2eeb7a19fc403a5a2451c44b813ca
+Author: chenhualang <hualang.chen@sap.com>
+Date:   Sat Mar 31 20:55:46 2018 +0800
+
+    first commit,running successfully
+
+commit 02f05334e6df05db63b7a2a7feabf6b6da481597
+Author: chenhualang <chenhualang_1988@sina.com>
+Date:   Sun Jan 14 17:08:53 2018 +0800
+
+    maven 多模块springboot

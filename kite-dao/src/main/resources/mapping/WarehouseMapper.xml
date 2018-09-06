@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.zhong.kite.mapper.WarehouseDAO">
+  <resultMap id="BaseResultMap" type="com.zhong.kite.DO.WarehouseDO">
+    <id column="id" jdbcType="INTEGER" property="id" />
+    <result column="full_name" jdbcType="VARCHAR" property="fullName" />
+    <result column="address_line" jdbcType="VARCHAR" property="addressLine" />
+    <result column="city" jdbcType="VARCHAR" property="city" />
+    <result column="province" jdbcType="VARCHAR" property="province" />
+    <result column="country" jdbcType="VARCHAR" property="country" />
+    <result column="zip" jdbcType="INTEGER" property="zip" />
+    <result column="phone_number" jdbcType="VARCHAR" property="phoneNumber" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    id, full_name, address_line, city, province, country, zip, phone_number
+  </sql>
+  <select id="queryWarehouseById" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+    select
+    <include refid="Base_Column_List" />
+    from warehouse
+    where id = #{id,jdbcType=INTEGER}
+  </select>
+  <select id="getWarehouseCount" parameterType="com.zhong.kite.model.WarehouseDTO" resultType="int">
+    select count(*)
+    from warehouse
+    <where>
+      <if test="country!= null and country !=''">
+        and country=#{country}
+      </if>
+      <if test="fullName!=null and fullName !=''">
+        and full_name like concat(concat('%',#{fullName}),'%')
+      </if>
+    </where>
+  </select>
+  <select id="getWarehouseList" parameterType="com.zhong.kite.model.WarehouseDTO" resultMap="BaseResultMap">
+    select
+    <include refid="Base_Column_List" />
+    from warehouse
+    <where>
+      <if test="country!= null and country !=''">
+        and country=#{country}
+      </if>
+      <if test="fullName!=null and fullName !=''">
+        and full_name like concat(concat('%',#{fullName}),'%')
+      </if>
+    </where>
+    order by id limit #{offset},#{pageSize}
+  </select>
+  <delete id="delWarehouse" parameterType="java.lang.Integer">
+    delete from warehouse
+    where id = #{id,jdbcType=INTEGER}
+  </delete>
+  <insert id="insert" parameterType="com.zhong.kite.model.WarehouseDTO">
+    insert into warehouse (id, full_name, address_line, 
+      city, province, country, 
+      zip, phone_number)
+    values (#{id,jdbcType=INTEGER}, #{fullName,jdbcType=VARCHAR}, #{addressLine,jdbcType=VARCHAR}, 
+      #{city,jdbcType=VARCHAR}, #{province,jdbcType=VARCHAR}, #{country,jdbcType=VARCHAR}, 
+      #{zip,jdbcType=INTEGER}, #{phoneNumber,jdbcType=VARCHAR})
+  </insert>
+  <insert id="addWarehouse" parameterType="com.zhong.kite.model.WarehouseDTO">
+    insert into warehouse
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        id,
+      </if>
+      <if test="fullName != null">
+        full_name,
+      </if>
+      <if test="addressLine != null">
+        address_line,
+      </if>
+      <if test="city != null">
+        city,
+      </if>
+      <if test="province != null">
+        province,
+      </if>
+      <if test="country != null">
+        country,
+      </if>
+      <if test="zip != null">
+        zip,
+      </if>
+      <if test="phoneNumber != null">
+        phone_number,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        #{id,jdbcType=INTEGER},
+      </if>
+      <if test="fullName != null">
+        #{fullName,jdbcType=VARCHAR},
+      </if>
+      <if test="addressLine != null">
+        #{addressLine,jdbcType=VARCHAR},
+      </if>
+      <if test="city != null">
+        #{city,jdbcType=VARCHAR},
+      </if>
+      <if test="province != null">
+        #{province,jdbcType=VARCHAR},
+      </if>
+      <if test="country != null">
+        #{country,jdbcType=VARCHAR},
+      </if>
+      <if test="zip != null">
+        #{zip,jdbcType=INTEGER},
+      </if>
+      <if test="phoneNumber != null">
+        #{phoneNumber,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateWarehouse" parameterType="com.zhong.kite.model.WarehouseDTO">
+    update warehouse
+    <set>
+      <if test="fullName != null">
+        full_name = #{fullName,jdbcType=VARCHAR},
+      </if>
+      <if test="addressLine != null">
+        address_line = #{addressLine,jdbcType=VARCHAR},
+      </if>
+      <if test="city != null">
+        city = #{city,jdbcType=VARCHAR},
+      </if>
+      <if test="province != null">
+        province = #{province,jdbcType=VARCHAR},
+      </if>
+      <if test="country != null">
+        country = #{country,jdbcType=VARCHAR},
+      </if>
+      <if test="zip != null">
+        zip = #{zip,jdbcType=INTEGER},
+      </if>
+      <if test="phoneNumber != null">
+        phone_number = #{phoneNumber,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.zhong.kite.model.WarehouseDTO">
+    update warehouse
+    set full_name = #{fullName,jdbcType=VARCHAR},
+      address_line = #{addressLine,jdbcType=VARCHAR},
+      city = #{city,jdbcType=VARCHAR},
+      province = #{province,jdbcType=VARCHAR},
+      country = #{country,jdbcType=VARCHAR},
+      zip = #{zip,jdbcType=INTEGER},
+      phone_number = #{phoneNumber,jdbcType=VARCHAR}
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+</mapper>

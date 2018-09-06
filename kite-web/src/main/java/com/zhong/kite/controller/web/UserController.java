@@ -15,6 +15,8 @@ import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.ModelAndView;
 
 import javax.servlet.http.HttpServletRequest;
+import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 @RequestMapping("/users")
@@ -79,6 +81,23 @@ public class UserController {
         ModelAndView view = new ModelAndView("myPackage");
         return view;
     }
+
+    /**
+     * 根据用户id查询用户信息
+     * @param id
+     * @return
+     */
+//    @ResponseBody
+//    @RequestMapping("/getUserById.action")
+//    public Map<String,Object> queryUserById(@RequestParam("uid")int id){
+//        Map<String,Object>map=new HashMap<String, Object>();
+//        List<DeptBean> dlist=deptService.getDeptList();
+//        UserBean user=userService.queryUserById(id);
+//        map.put("user", user);
+//        map.put("dept", dlist);
+//        return map;
+//    }
+
 
 //    @RequestMapping(value = "/all",method = RequestMethod.POST)
 //    public BaseResult<Map<String,Object>> findAllUsers(@RequestParam(value="pageNumber",defaultValue="0",required=false)int pageNumber,

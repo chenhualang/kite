@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.zhong.kite.mapper.PackageInfoDAO">
+  <resultMap id="BaseResultMap" type="com.zhong.kite.DO.PackageInfoDO">
+    <id column="id" jdbcType="INTEGER" property="id" />
+    <result column="warehouse_no" jdbcType="VARCHAR" property="warehouseNo" />
+    <result column="destination_region" jdbcType="VARCHAR" property="destinationRegion" />
+    <result column="merchant_logistics_no" jdbcType="VARCHAR" property="merchantLogisticsNo" />
+    <result column="address" jdbcType="VARCHAR" property="address" />
+    <result column="order_no" jdbcType="VARCHAR" property="orderNo" />
+    <result column="user_name" jdbcType="VARCHAR" property="userName" />
+    <result column="province" jdbcType="VARCHAR" property="province" />
+    <result column="city" jdbcType="VARCHAR" property="city" />
+    <result column="status" jdbcType="VARCHAR" property="status" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    id, warehouse_no, destination_region, merchant_logistics_no, address, order_no, user_name, 
+    province, city, status
+  </sql>
+  <select id="queryPackageInfoById" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from package_info
+    where id = #{id,jdbcType=INTEGER}
+  </select>
+  <select id="getPackageInfoCount" parameterType="com.zhong.kite.model.PackageInfoDTO" resultType="int">
+    select count(*)
+    from package_info
+    <where>
+      <if test="orderNo!= null and orderNo!=''">
+        and order_no=#{orderNo}
+      </if>
+      <if test="merchantLogisticsNo!= null and merchantLogisticsNo!=''">
+        and merchant_logistics_no=#{merchantLogisticsNo}
+      </if>
+      <if test="status!= null and status!=''">
+        and status=#{status}
+      </if>
+    </where>
+  </select>
+  <select id="getPackageInfoList" parameterType="com.zhong.kite.model.PackageInfoDTO" resultMap="BaseResultMap">
+    select
+    <include refid="Base_Column_List" />
+    from package_info
+    <where>
+      <if test="orderNo!= null and orderNo!=''">
+        and order_no=#{orderNo}
+      </if>
+      <if test="merchantLogisticsNo!= null and merchantLogisticsNo!=''">
+        and merchant_logistics_no=#{merchantLogisticsNo}
+      </if>
+      <if test="status!= null and status!=''">
+        and status=#{status}
+      </if>
+    </where>
+    order by id limit #{offset},#{pageSize}
+  </select>
+  <delete id="delPackageInfo" parameterType="java.lang.Integer">
+    delete from package_info
+    where id = #{id,jdbcType=INTEGER}
+  </delete>
+  <insert id="insert" parameterType="com.zhong.kite.model.PackageInfoDTO">
+    insert into package_info (id, warehouse_no, destination_region, 
+      merchant_logistics_no, address, order_no, 
+      user_name, province, city, 
+      status)
+    values (#{id,jdbcType=INTEGER}, #{warehouseNo,jdbcType=VARCHAR}, #{destinationRegion,jdbcType=VARCHAR}, 
+      #{merchantLogisticsNo,jdbcType=VARCHAR}, #{address,jdbcType=VARCHAR}, #{orderNo,jdbcType=VARCHAR},
+      #{userName,jdbcType=VARCHAR}, #{province,jdbcType=VARCHAR}, #{city,jdbcType=VARCHAR}, 
+      #{status,jdbcType=VARCHAR})
+  </insert>
+  <insert id="addPackageInfo" parameterType="com.zhong.kite.model.PackageInfoDTO">
+    insert into package_info
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        id,
+      </if>
+      <if test="warehouseNo != null">
+        warehouse_no,
+      </if>
+      <if test="destinationRegion != null">
+        destination_region,
+      </if>
+      <if test="merchantLogisticsNo != null">
+        merchant_logistics_no,
+      </if>
+      <if test="address != null">
+        address,
+      </if>
+      <if test="orderNo != null">
+        order_no,
+      </if>
+      <if test="userName != null">
+        user_name,
+      </if>
+      <if test="province != null">
+        province,
+      </if>
+      <if test="city != null">
+        city,
+      </if>
+      <if test="status != null">
+        status,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        #{id,jdbcType=INTEGER},
+      </if>
+      <if test="warehouseNo != null">
+        #{warehouseNo,jdbcType=VARCHAR},
+      </if>
+      <if test="destinationRegion != null">
+        #{destinationRegion,jdbcType=VARCHAR},
+      </if>
+      <if test="merchantLogisticsNo != null">
+        #{merchantLogisticsNo,jdbcType=VARCHAR},
+      </if>
+      <if test="address != null">
+        #{address,jdbcType=VARCHAR},
+      </if>
+      <if test="orderNo != null">
+        #{orderNo,jdbcType=VARCHAR},
+      </if>
+      <if test="userName != null">
+        #{userName,jdbcType=VARCHAR},
+      </if>
+      <if test="province != null">
+        #{province,jdbcType=VARCHAR},
+      </if>
+      <if test="city != null">
+        #{city,jdbcType=VARCHAR},
+      </if>
+      <if test="status != null">
+        #{status,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <update id="updatePackageInfo" parameterType="com.zhong.kite.model.PackageInfoDTO">
+    update package_info
+    <set>
+      <if test="warehouseNo != null">
+        warehouse_no = #{warehouseNo,jdbcType=VARCHAR},
+      </if>
+      <if test="destinationRegion != null">
+        destination_region = #{destinationRegion,jdbcType=VARCHAR},
+      </if>
+      <if test="merchantLogisticsNo != null">
+        merchant_logistics_no = #{merchantLogisticsNo,jdbcType=VARCHAR},
+      </if>
+      <if test="address != null">
+        address = #{address,jdbcType=VARCHAR},
+      </if>
+      <if test="orderNo != null">
+        order_no = #{orderNo,jdbcType=VARCHAR},
+      </if>
+      <if test="userName != null">
+        user_name = #{userName,jdbcType=VARCHAR},
+      </if>
+      <if test="province != null">
+        province = #{province,jdbcType=VARCHAR},
+      </if>
+      <if test="city != null">
+        city = #{city,jdbcType=VARCHAR},
+      </if>
+      <if test="status != null">
+        status = #{status,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.zhong.kite.model.PackageInfoDTO">
+    update package_info
+    set warehouse_no = #{warehouseNo,jdbcType=VARCHAR},
+      destination_region = #{destinationRegion,jdbcType=VARCHAR},
+      merchant_logistics_no = #{merchantLogisticsNo,jdbcType=VARCHAR},
+      address = #{address,jdbcType=VARCHAR},
+      order_no = #{orderNo,jdbcType=VARCHAR},
+      user_name = #{userName,jdbcType=VARCHAR},
+      province = #{province,jdbcType=VARCHAR},
+      city = #{city,jdbcType=VARCHAR},
+      status = #{status,jdbcType=VARCHAR}
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+</mapper>

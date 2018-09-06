@@ -44,7 +44,7 @@
 		<li class="childUlLi">
 			<a href="main.html"  target="menuFrame"><i class="glyph-icon icon-home"></i>首页</a>
 			<ul>
-				<li><a href="myPackage.jsp" target="menuFrame"><i class="glyph-icon icon-chevron-right"></i>我的包裹</a></li>
+				<li><a href="packageinfo.jsp" target="menuFrame"><i class="glyph-icon icon-chevron-right"></i>我的包裹</a></li>
 			</ul>
 		</li>
 		<li class="childUlLi">

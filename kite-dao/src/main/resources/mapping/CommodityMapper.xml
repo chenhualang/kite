@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.zhong.kite.mapper.CommodityDAO">
+    <resultMap id="BaseResultMap" type="com.zhong.kite.DO.CommodityDO">
+        <id column="id" jdbcType="INTEGER" property="id"/>
+        <result column="kind" jdbcType="VARCHAR" property="kind"/>
+        <result column="brand" jdbcType="VARCHAR" property="brand"/>
+        <result column="name" jdbcType="VARCHAR" property="name"/>
+        <result column="count" jdbcType="INTEGER" property="count"/>
+        <result column="merchant_logistics_no" jdbcType="VARCHAR" property="merchantLogisticsNo"/>
+        <result column="unit_price" jdbcType="DECIMAL" property="unitPrice"/>
+        <result column="total_price" jdbcType="DECIMAL" property="totalPrice"/>
+        <result column="size" jdbcType="DOUBLE" property="size"/>
+    </resultMap>
+    <sql id="Base_Column_List">
+    id, kind, brand, name, count,merchant_logistics_no,unit_price, total_price, size
+  </sql>
+    <select id="queryCommodityById" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+        select
+        <include refid="Base_Column_List"/>
+        from commodity
+        where id = #{id,jdbcType=INTEGER}
+    </select>
+    <select id="getCommodityCount" parameterType="com.zhong.kite.model.CommodityDTO" resultType="int">
+        select count(*)
+        from commodity
+        <where>
+            <if test="kind!= null and kind !=''">
+                and kind=#{kind}
+            </if>
+            <if test="brand!= null and brand !=''">
+                and brand=#{brand}
+            </if>
+            <if test="name!= null and name !=''">
+                and name=#{name}
+            </if>
+            <if test="merchantLogisticsNo!= null and merchantLogisticsNo !=''">
+                and merchant_logistics_no=#{merchantLogisticsNo}
+            </if>
+        </where>
+    </select>
+    <select id="getCommodityList" parameterType="com.zhong.kite.model.CommodityDTO" resultMap="BaseResultMap">
+        select
+        <include refid="Base_Column_List"/>
+        from commodity
+        <where>
+            <if test="kind!= null and kind !=''">
+                and kind=#{kind}
+            </if>
+            <if test="brand!= null and brand !=''">
+                and brand=#{brand}
+            </if>
+            <if test="name!= null and name !=''">
+                and name=#{name}
+            </if>
+            <if test="merchantLogisticsNo!= null and merchantLogisticsNo !=''">
+                and merchant_logistics_no=#{merchantLogisticsNo}
+            </if>
+        </where>
+        order by id limit #{offset},#{pageSize}
+    </select>
+    <delete id="delCommodity" parameterType="java.lang.Integer">
+    delete from commodity
+    where id = #{id,jdbcType=INTEGER}
+  </delete>
+    <insert id="insert" parameterType="com.zhong.kite.model.CommodityDTO">
+    insert into commodity (id, kind, brand, 
+      name, count, merchant_logistics_no,unit_price,
+      total_price, size)
+    values (#{id,jdbcType=INTEGER}, #{kind,jdbcType=VARCHAR}, #{brand,jdbcType=VARCHAR}, 
+      #{name,jdbcType=VARCHAR}, #{count,jdbcType=INTEGER},#{merchantLogisticsNo,jdbcType=VARCHAR}, #{unitPrice,jdbcType=DECIMAL},
+      #{totalPrice,jdbcType=DECIMAL}, #{size,jdbcType=DOUBLE})
+  </insert>
+    <insert id="addCommodity" parameterType="com.zhong.kite.model.CommodityDTO">
+        insert into commodity
+        <trim prefix="(" suffix=")" suffixOverrides=",">
+            <if test="id != null">
+                id,
+            </if>
+            <if test="kind != null">
+                kind,
+            </if>
+            <if test="brand != null">
+                brand,
+            </if>
+            <if test="name != null">
+                name,
+            </if>
+            <if test="count != null">
+                count,
+            </if>
+            <if test="merchantLogisticsNo != null">
+                merchant_logistics_no,
+            </if>
+            <if test="unitPrice != null">
+                unit_price,
+            </if>
+            <if test="totalPrice != null">
+                total_price,
+            </if>
+            <if test="size != null">
+                size,
+            </if>
+        </trim>
+        <trim prefix="values (" suffix=")" suffixOverrides=",">
+            <if test="id != null">
+                #{id,jdbcType=INTEGER},
+            </if>
+            <if test="kind != null">
+                #{kind,jdbcType=VARCHAR},
+            </if>
+            <if test="brand != null">
+                #{brand,jdbcType=VARCHAR},
+            </if>
+            <if test="name != null">
+                #{name,jdbcType=VARCHAR},
+            </if>
+            <if test="count != null">
+                #{count,jdbcType=INTEGER},
+            </if>
+            <if test="merchantLogisticsNo != null">
+                #{merchantLogisticsNo,jdbcType=VARCHAR},
+            </if>
+            <if test="unitPrice != null">
+                #{unitPrice,jdbcType=DECIMAL},
+            </if>
+            <if test="totalPrice != null">
+                #{totalPrice,jdbcType=DECIMAL},
+            </if>
+            <if test="size != null">
+                #{size,jdbcType=DOUBLE},
+            </if>
+        </trim>
+    </insert>
+    <update id="updateCommodity" parameterType="com.zhong.kite.model.CommodityDTO">
+        update commodity
+        <set>
+            <if test="kind != null">
+                kind = #{kind,jdbcType=VARCHAR},
+            </if>
+            <if test="brand != null">
+                brand = #{brand,jdbcType=VARCHAR},
+            </if>
+            <if test="name != null">
+                name = #{name,jdbcType=VARCHAR},
+            </if>
+            <if test="count != null">
+                count = #{count,jdbcType=INTEGER},
+            </if>
+            <if test="merchantLogisticsNo != null">
+                merchant_logistics_no = #{merchantLogisticsNo,jdbcType=VARCHAR},
+            </if>
+            <if test="unitPrice != null">
+                unit_price = #{unitPrice,jdbcType=DECIMAL},
+            </if>
+            <if test="totalPrice != null">
+                total_price = #{totalPrice,jdbcType=DECIMAL},
+            </if>
+            <if test="size != null">
+                size = #{size,jdbcType=DOUBLE},
+            </if>
+        </set>
+        where id = #{id,jdbcType=INTEGER}
+    </update>
+    <update id="updateByPrimaryKey" parameterType="com.zhong.kite.model.CommodityDTO">
+    update commodity
+    set kind = #{kind,jdbcType=VARCHAR},
+      brand = #{brand,jdbcType=VARCHAR},
+      name = #{name,jdbcType=VARCHAR},
+      count = #{count,jdbcType=INTEGER},
+       merchant_logistics_no = #{merchantLogisticsNo,jdbcType=VARCHAR},
+      unit_price = #{unitPrice,jdbcType=DECIMAL},
+      total_price = #{totalPrice,jdbcType=DECIMAL},
+      size = #{size,jdbcType=DOUBLE}
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+</mapper>

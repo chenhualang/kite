@@ -1,14 +1,11 @@
-package com.zhong.kite.service.userservice;
+package com.zhong.kite.service.user;
 
 import com.zhong.kite.DO.UserDO;
 import com.zhong.kite.UserService;
-import com.zhong.kite.mapper.UserDAO;
-import com.zhong.kite.model.UserDTO;
 import com.zhong.kite.service.BaseTest;
 import org.junit.Test;
 
 import javax.annotation.Resource;
-import java.util.List;
 
 //@RunWith(SpringJUnit4ClassRunner.class) //使用junit4进行测试
 //@ContextConfiguration(locations={"classpath:spring/spring-kite-biz.xml"}) //加载配置文件

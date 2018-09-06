@@ -1,225 +1,173 @@
-<!DOCTYPE html>
-<%@ page language="java" import="java.util.*" pageEncoding="utf-8"%>
-<html lang="en">
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<html>
 <head>
-<title>Services</title>
-<!-- for-mobile-apps -->
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<meta name="keywords" content="Deliccio Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template, 
-Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyErricsson, Motorola web design" />
-<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false);
-		function hideURLbar(){ window.scrollTo(0,1); } </script>
-<!-- //for-mobile-apps -->
-<link href="css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
-<link href="css/style.css" rel="stylesheet" type="text/css" media="all" />
-<!-- js -->
-<script src="jsFiles/jquery-1.11.1.min.js"></script>
-<!-- //js -->
-<!-- FlexSlider -->
-<link rel="stylesheet" href="css/flexslider.css" type="text/css" media="screen" />
-<script defer src="jsFiles/jquery.flexslider.js"></script>
-<script type="text/javascript">
-						$(window).load(function(){
-						  $('.flexslider').flexslider({
-							animation: "slide",
-							start: function(slider){
-							  $('body').removeClass('loading');
-							}
-						  });
-						});
-					  </script>
-<!-- //FlexSlider -->
-<link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic,800,800italic' rel='stylesheet' type='text/css'>
-</head>
-	
-<body>
-<!-- banner -->
-	<div class="banner1">
-		<div class="container">
-			<div class="header-nav">
-				<nav class="navbar navbar-default">
-					<!-- Brand and toggle get grouped for better mobile display -->
-					<div class="navbar-header">
-					  <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-						<span class="sr-only">Toggle navigation</span>
-						<span class="icon-bar"></span>
-						<span class="icon-bar"></span>
-						<span class="icon-bar"></span>
-					  </button>
-						<div class="logo">
-							<a class="navbar-brand" href="index.jsp">Deliccio <span>Healthy And Tasty Food</span></a>
-						</div>
-					</div>
+      <title>Title</title>
+    <link href="${pageContext.request.contextPath}/css/bootstrap.css" rel="stylesheet">
+    <link href="${pageContext.request.contextPath}/css/font-awesome.css" rel="stylesheet">
+    <link href="${pageContext.request.contextPath}/css/animate.css" rel="stylesheet">
+    <link href="${pageContext.request.contextPath}/css/style.css" rel="stylesheet">
 
-					<!-- Collect the nav links, forms, and other content for toggling -->
-					<div class="collapse navbar-collapse nav-wil" id="bs-example-navbar-collapse-1">
-					  <ul class="nav navbar-nav">
-						<li><a href="index.jsp">首页</a></li>
-						<li class="active"><a href="/kite/package">我的包裹</a></li>
-						<li><a href="order.jsp">订单管理</a></li>
-						<li><a href="system.jsp">系统管理</a></li>
-						<li><a href="contact.jsp">联系我们</a></li>
-					  </ul>
-					</div><!-- /.navbar-collapse -->
-				</nav>
+    <!-- Mainly scripts -->
+    <script src="${pageContext.request.contextPath}/js/jquery-3.1.1.min.js"></script>
+    <script src="${pageContext.request.contextPath}/js/bootstrap.js"></script>
+    <script src="${pageContext.request.contextPath}/js/jquery.metisMenu.js"></script>
+    <script src="${pageContext.request.contextPath}/js/jquery.slimscroll.min.js"></script>
+
+    <!-- Custom and plugin javascript -->
+    <script src="${pageContext.request.contextPath}/js/inspinia.js"></script>
+    <script src="${pageContext.request.contextPath}/js/pace.min.js"></script>
+<script type="text/javascript" src="${pageContext.request.contextPath}/js/index.js"></script>
+
+<link href="${pageContext.request.contextPath }/static/css/style.css" rel="stylesheet" type="text/css">
+<script type="text/javascript" src="${pageContext.request.contextPath }/js/bootstrap-table.js"></script>
+<script type="text/javascript" src="${pageContext.request.contextPath }/js/bootstrap-table-zh-CN.js"></script>
+<script type="text/javascript" src="${pageContext.request.contextPath }/js/bootstrapValidator.js"></script>
+<script type="text/javascript" src="${pageContext.request.contextPath }/js/zh_CN.js"></script>
+<link href="${pageContext.request.contextPath }/css/bootstrapValidator.css" rel="stylesheet" type="text/css">
+</head>
+<style type="text/css">
+ .modal {
+     position: fixed;  
+    top: 10%;
+    left: 30%;
+    width: 800px;
+    height: 800px;
+     margin: 100px 100 0 0px;/* margin 负值为宽高的一半 */ */
+} 
+</style>
+<body class="">
+<div id="wrapper">
+    <nav class="navbar-default navbar-static-side" role="navigation">
+        <div class="sidebar-collapse">
+            <ul class="nav metismenu" id="side-menu">
+                <li class="nav-header">
+                    <div class="dropdown profile-element"> <span>
+                        <c:if test=""></c:if>
+                            <img alt="image" class="img-circle" src="${pageContext.request.contextPath}/static/img/profile_small.jpg" />
+                             </span>
+                        <a data-toggle="dropdown" class="dropdown-toggle" href="#">
+                            <span class="clear"> <span class="block m-t-xs"> <strong class="font-bold">${user.username}</strong>
+                             </span> <span class="text-muted text-xs block">${NAME } <b class="caret"></b></span> </span> </a>
+                        <ul class="dropdown-menu animated fadeInRight m-t-xs">
+                            <!-- <li><a href="profile.html" id="">个人信息</a></li> -->
+                            <li><a onclick="openPassDlg()">修改密码</a></li>
+                            <li class="divider"></li>
+                            <li><a onclick="quit()">安全退出</a></li>
+                        </ul>
+                    </div>
+                    <div class="logo-element">
+                        IN+
+                    </div>
+                </li>
+                <li><a onclick="getPage('goWarehouse.action','转运仓管理')">
+                    <i class="fa fa-user"></i>
+                    <span class="nav-label">转运仓管理</span>
+                </a></li>
+                <li><a onclick="getPage('goPackageInfo.action','包裹管理')">
+                    <i class="fa fa-user"></i>
+                    <span class="nav-label">包裹管理</span>
+                </a></li>
+                <li><a onclick="getPage('goCommodity.action','商品管理')">
+                    <i class="fa fa-user"></i>
+                    <span class="nav-label">商品管理</span>
+                </a></li>
+
+                <!--下面两个菜单是固定死的  -->
+                <li> <a onclick="openPassDlg()"><i class="fa fa-key"></i>
+                 <span class="nav-label">修改密码</span>
+                </a></li>
+                <li> <a onclick="quit()"><i class="fa fa-sign-out"></i>
+                 <span class="nav-label">退出登陆</span>
+                </a></li>
+            </ul>
+        </div>
+    </nav>
+    <div id="page-wrapper" class="gray-bg">
+        <div class="row border-bottom">
+            <nav class="navbar navbar-static-top  " role="navigation" style="margin-bottom: 0">
+                <div class="navbar-header">
+                    <a class="navbar-minimalize minimalize-styl-2 btn btn-primary " href="#"><i class="fa fa-bars"></i> </a>
+                </div>
+                <div class="nav navbar-top-links navbar-right">
+                        <span class="m-r-sm text-muted welcome-message">
+                        <iframe frameborder='0' scrolling='auto' src='time.html' style='padding:0px;width:100%;height:5%;' ></iframe>
+                        </span>
+				</div>
+            </nav>
+        </div>
+        <div class="row wrapper border-bottom white-bg page-heading" id="title">
+            <div class="col-sm-4">
+                <h2></h2>
+                <ol class="breadcrumb">
+                    <li>
+                        <a href="index.html" id="index">首页</a>
+                    </li>
+                    <li class="active">
+                        <span>Breadcrumb</span>
+                    </li>
+                    <li class="active">
+                        <strong>Breadcrumb</strong>
+                    </li>
+                </ol>
+            </div>
+        </div>
+        <div class="wrapper wrapper-content" id="content"></div>
+        <div class="footer">
+            <div class="pull-right">
+                10GB of <strong>250GB</strong> Free.
+            </div>
+            <div>
+                <strong>Copyright</strong> Example Company &copy; 2014-2017
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- 模态框（Modal） -->
+<!-- 修改 -->
+<div id="passDlg" class="modal fade"  tabindex="-1" role="dialog" data-backdrop="static" data-keyboard="false" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                <h4 class="modal-title" id="myModalLabel">修改密码</h4>
+            </div>
+            <div class="container">
+			<form class="form-horizontal" id="myform"  method="post">
+			<div class="form-group">
+			<label class="col-md-2 control-label">旧密码：</label>
+			<div class="col-md-3 ">
+			<input type="password" id="oldPass" name="oldPass" class="form-control form-control-static"  placeholder="请输入原始密码">
+			<input  type="hidden" id="pass" value="${PASS }" name="password">
+			<input  type="hidden" id="uid" value="${ID }" name="id">
 			</div>
-		</div>
-	</div>
-<!-- //banner -->
-<!-- services -->
-	<div class="services">
-		<div class="container">
-			<div class="services-overview">
-				<h3>Services Overview</h3>
-				<div class="services-overview-grids">
-					<div class="col-md-4 services-overview-grid">
-						<div class="services-overview-grd">
-							<a href="images/4.jpg" class="b-link-stripe b-animate-go1   swipebox"  title="">
-								<img src="images/4.jpg" alt=" " class="img-responsive" />
-							</a>
-							<div class="services-overview-gd">
-								<h4>Itaque earum rerum hic tenetur</h4>
-								<p>Neque porro quisquam est, qui dolorem ipsum quia dolor 
-									sit amet, consectetur, adipisci velit, sed quia non numquam 
-									eius modi tempora incidunt ut labore et dolore magnam aliquam 
-									quaerat voluptatem.</p>
-							</div>
-						</div>
-					</div>
-					<div class="col-md-4 services-overview-grid">
-						<div class="services-overview-grd">
-							<a href="images/5.jpg" class="b-link-stripe b-animate-go1   swipebox"  title="">
-								<img src="images/5.jpg" alt=" " class="img-responsive" />
-							</a>
-							<div class="services-overview-gd">
-								<h4>Itaque earum rerum hic tenetur</h4>
-								<p>Neque porro quisquam est, qui dolorem ipsum quia dolor 
-									sit amet, consectetur, adipisci velit, sed quia non numquam 
-									eius modi tempora incidunt ut labore et dolore magnam aliquam 
-									quaerat voluptatem.</p>
-							</div>
-						</div>
-					</div>
-					<div class="col-md-4 services-overview-grid">
-						<div class="services-overview-grd">
-							<a href="images/6.jpg" class="b-link-stripe b-animate-go1   swipebox"  title="">
-								<img src="images/6.jpg" alt=" " class="img-responsive" />
-							</a>
-							<div class="services-overview-gd">
-								<h4>Itaque earum rerum hic tenetur</h4>
-								<p>Neque porro quisquam est, qui dolorem ipsum quia dolor 
-									sit amet, consectetur, adipisci velit, sed quia non numquam 
-									eius modi tempora incidunt ut labore et dolore magnam aliquam 
-									quaerat voluptatem.</p>
-							</div>
-						</div>
-					</div>
-					<div class="clearfix"> </div>
-				</div>
-				<div class="services-overview-grids">
-					<div class="col-md-4 services-overview-grid">
-						<div class="services-overview-grd">
-							<a href="images/7.jpg" class="b-link-stripe b-animate-go1   swipebox"  title="">
-								<img src="images/7.jpg" alt=" " class="img-responsive" />
-							</a>
-							<div class="services-overview-gd">
-								<h4>Itaque earum rerum hic tenetur</h4>
-								<p>Neque porro quisquam est, qui dolorem ipsum quia dolor 
-									sit amet, consectetur, adipisci velit, sed quia non numquam 
-									eius modi tempora incidunt ut labore et dolore magnam aliquam 
-									quaerat voluptatem.</p>
-							</div>
-						</div>
-					</div>
-					<div class="col-md-4 services-overview-grid">
-						<div class="services-overview-grd">
-							<a href="images/8.jpg" class="b-link-stripe b-animate-go1   swipebox"  title="">
-								<img src="images/8.jpg" alt=" " class="img-responsive" />
-							</a>
-							<div class="services-overview-gd">
-								<h4>Itaque earum rerum hic tenetur</h4>
-								<p>Neque porro quisquam est, qui dolorem ipsum quia dolor 
-									sit amet, consectetur, adipisci velit, sed quia non numquam 
-									eius modi tempora incidunt ut labore et dolore magnam aliquam 
-									quaerat voluptatem.</p>
-							</div>
-						</div>
-					</div>
-					<div class="col-md-4 services-overview-grid">
-						<div class="services-overview-grd">
-							<a href="images/9.jpg" class="b-link-stripe b-animate-go1   swipebox"  title="">
-								<img src="images/9.jpg" alt=" " class="img-responsive" />
-							</a>
-							<div class="services-overview-gd">
-								<h4>Itaque earum rerum hic tenetur</h4>
-								<p>Neque porro quisquam est, qui dolorem ipsum quia dolor 
-									sit amet, consectetur, adipisci velit, sed quia non numquam 
-									eius modi tempora incidunt ut labore et dolore magnam aliquam 
-									quaerat voluptatem.</p>
-							</div>
-						</div>
-					</div>
-					<div class="clearfix"> </div>
-				</div>
 			</div>
-			<link rel="stylesheet" href="css/swipebox.css">
-						<script src="js/jquery.swipebox.min.js"></script> 
-							<script type="text/javascript">
-								jQuery(function($) {
-									$(".swipebox").swipebox();
-								});
-							</script>
-		</div>
-	</div>
-<!-- //services -->
-<!--footer-->
-	<div class="footer">
-		<div class="container">
-			<div class="footer-row">
-				<div class="col-md-3 footer-grids">
-					<h4><a href="index.jsp">Deliccio</a></h4>
-					<p><a href="mailto:info@example.com">mail@example.com</a></p>
-					<p>+2 000 222 1111</p>
-				</div>
-				<div class="col-md-3 footer-grids">
-					<h3>Navigation</h3>					
-					<ul>
-						<li><a href="index.jsp">Home</a></li>
-						<li><a href="index.jsp">About us</a></li>
-						<li><a href="menu.html">Menu</a></li>
-						<li><a href="typo.html">Typo</a></li>
-						<li><a href="contact.html">Contact</a></li>
-					</ul>
-				</div>
-				<div class="col-md-3 footer-grids">
-					<h3>Support</h3>
-					<ul>
-						<li><a href="services.html">Services</a></li>
-						<li><a href="#">Help Center</a></li>
-						<li><a href="#">Lemollisollis</a></li>
-					</ul>
-				</div>
-				<div class="col-md-3 footer-grids">	
-					<h3>Newsletter</h3>
-					<p>It was popularised in the 1960s with the release Ipsum. <p>
-					<form>					 
-					    <input type="text" class="text" value="Enter Email" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Enter Email';}">
-						<input type="submit" value="Go">					 
-				 </form>
-				</div>
-				<div class="clearfix"> </div>
+			
+			<div class="form-group">
+			<label class="col-md-2 control-label">新密码：</label>
+			<div class="col-md-3 ">
+			<input type="password" id="newPass"  name="newPass" class="form-control form-control-static" placeholder="请输入新密码">
 			</div>
-		</div>
-	</div>
-	<div class="footer-bottom">
-		<div class="container">		
-			<p>Copyright &copy; 2015.Company name All rights reserved.More Templates <a href="http://www.cssmoban.com/" target="_blank" title="模板之家">模板之家</a> - Collect from <a href="http://www.cssmoban.com/" title="网页模板" target="_blank">网页模板</a></p>					
-		</div>
-	</div>
-<!--//footer-->	
-<!-- for bootstrap working -->
-		<script src="js/bootstrap.js"> </script>
-<!-- //for bootstrap working -->
+			</div>
+			
+			<div class="form-group">
+			<label class="col-md-2 control-label">确认密码：</label>
+			<div class="col-md-3">
+			<input type="password" id="againPass"  name="againPass" class="form-control form-control-static" placeholder="请输入新密码">
+			</div>
+			</div>
+            <div class="modal-footer col-md-6">
+            <!--用来清空表单数据-->
+            <input type="reset" name="reset" style="display: none;" />
+                <button type="button" class="btn btn-default" onclick="closeDlgs()">关闭</button>
+               <button type="button" onclick="upPass()" class="btn btn-primary">修改</button>
+            </div>
+            </form>
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal -->
+</div>
 </body>
 </html>

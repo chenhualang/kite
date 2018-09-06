@@ -55,7 +55,7 @@
 	<logger name="com.zhong.kite.mapper.*" level="DEBUG" />
 
 	<!-- 定义了ERROR和INFO级别的日志，分别在STDOUT/mavenProjectlogs输出 -->
-	<root level="info">
+	<root level="debug">
 		<appender-ref ref="STDOUT" />
 		<appender-ref ref="kitelogs" />
 	</root>
